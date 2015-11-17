@@ -1,0 +1,45 @@
+<html>
+    {# HEAD #}
+    {% block head %}
+    <head>
+        <title>
+        {% block page_title %}
+        Solidaritize
+        {% endblock page_title %}
+        </title>
+        <meta name="description" content="Express your solidarity for those countries who have suffered tragedies. ">
+        <meta name="viewport" content="width=300, initial-scale=1">
+        <link rel="stylesheet" href="/static/css/build.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        {% block head_scripts %}{% endblock head_scripts %}
+    </head>
+    {% endblock head %}
+
+    {# BODY #}
+    {% block body %}
+    <body>
+        {% include "partials/fb/init.html" %}
+
+        <div class="header">
+            Solidaritize
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <div class="footer">
+        </div>
+
+        <!-- build:css inline /static/js/build.min.js -->
+        {% block end_scripts %}
+        <script src="/static/js/lib/jquery-2.1.4.js"></script>
+        <script src="/static/js/lib/exif.js"></script>
+        <script src="/static/js/lib/binaryajax.js"></script>
+        <script src="/static/js/lib/jquery.canvasResize.js"></script>
+        <script src="/static/js/main.js"></script>
+        {% endblock end_scripts %}
+        <!-- /build -->
+    </body>
+    {% endblock body %}
+
+</html>

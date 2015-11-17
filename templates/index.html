@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content-small centered" id="simple-version-001">
+    <div class="avatar-container">
+        <canvas width="300px" height="300px" class="avatar avatar-lg centered" id="avatarCanvas" style="image-orientation: from-image"></canvas>
+        <div class="upload-prompt">
+            <p>
+                <i class="fa fa-camera fa-2x"></i>
+                <br>
+                <span>Upload an Image</span>
+                or click below to use your facebook profile picture.
+            </p>
+        </div>
+    </div>
+    <div class="sources sources-lg">
+        <div class="src src-fb">
+            <i class="fa fa-facebook fa-2x"></i>
+        </div>
+        <!-- <div class="src src-tw">
+            <i class="fa fa-twitter fa-2x"></i>
+        </div> -->
+        <!-- <div class="src src-ul">
+            <i class="fa fa-upload fa-2x"></i>
+        </div> -->
+    </div>
+    <form id="filter-form">
+        <select name="filter" id="filter-select" class="hidden">
+            <option value="null" selected>Select a filter</option>
+            <option value="lebanon">LEBANON</option>
+            <option value="myanmar">MYANMAR</option>
+            <option value="kenya">KENYA</option>
+            <option value="syria">SYRIA</option>
+        </select>
+        <input type="file" name="profile-image" accept="image/*" id="profileImageInput" class="hidden">
+    </form>
+    <a href="#" id="download-button" target="_blank" download="profile.png">
+        <div href="#download" class="download-button hidden" download="profile.png">
+            Download&nbsp;&nbsp;<i class="fa fa-download"></i>
+        </div>
+    </a>
+    <p class="download-instructions hidden">
+        If the download button doesn't work, right click or tap and hold to download the image.
+    </p>
+</div>
+{% endblock content %}

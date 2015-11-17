@@ -1,0 +1,43 @@
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    background-image: url(/static/img/avatars/default-avatar-h200.jpg);
+    background-position: center center;
+    background-size: cover;
+    &.avatar-lg {
+        width: 300px;
+        height: 300px;
+        background-image: url(/static/img/avatars/default-avatar-h300.jpg);
+    }
+    &.centered {
+        margin: 0 auto;
+    }
+}
+
+.sources {
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    &.sources-lg {
+        width: 300px;
+    }
+    .src {
+        padding-top: 10px;
+        height: 100%;
+        float: left;
+        color: #fff;
+        width: 100%;
+        &.src-fb {
+            background-color: #3b5998;
+        }
+        &.src-tw {
+            background-color: #4099FF;
+        }
+        &.src-ul {
+            background-color: #665884;
+        }
+    }
+}

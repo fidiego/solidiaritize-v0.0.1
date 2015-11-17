@@ -1,0 +1,14 @@
+@import 'variables';
+.header {
+    height: $header_height;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-style: bold;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 15px;
+    color: #55496D;
+}
